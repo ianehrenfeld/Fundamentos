@@ -1,0 +1,9 @@
+Proceso sin_titulo
+	escribir "introduzca la altura "
+	leer altura
+	escribir "introduzca base"
+	leer base
+	area<-altura*base
+	escribir "el area es"
+	escribir area 
+finproceso 
