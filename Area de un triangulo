@@ -1,0 +1,22 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+
+int main ()
+{
+	float base,altura,area;
+	cout << "ingrese base" << endl;
+	cin >> base;
+	cout << "ingrese altura"<< endl;
+	cin >> altura;
+	area = (base*altura)/2;
+	cout << "el area es:" << endl;
+	cout << area;
+	getch();
+
+	return 0;
+}
+
