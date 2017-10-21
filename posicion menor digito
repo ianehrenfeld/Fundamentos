@@ -1,0 +1,58 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main();{
+int a,b,c,d,e,f,g,h,i,j,k,k1,k2,k3,k4,k5,k6,k7,k8,p;
+cout<<"Ingrese un numero de 10 digitos";
+cin>>a>>b>>c>>d>>e>>f>>g>>h>>i>>j;
+if (a<=b){
+p=1;
+k=a; }
+else {
+k=b; }
+if (k<=c){
+p=2;
+k1=k; }
+else {
+k1=c; }
+if (k1<=d){
+p=3;
+k2=k1; }
+else {
+k2=d; }
+if (k2<=e){
+p=4;
+k3=k2; }
+else {
+k3=e; }
+if (k3<=f){
+p=5;
+k4=k3; }
+else {
+k4=f; }
+if (k4<=g){
+p=6;
+k5=k4; }
+else {
+k5=g; }
+if (k5<=h){
+p=7;
+k6=k5;}
+else {
+k6=h;}
+if (k6=i){
+p=8;
+k7=k6;}
+else {
+k7=i ;}
+if (k7=j){
+p=9;
+k8=k7;}
+else {
+p=10;
+k8=j;}
+cout<<"Su numero es:"<<a<<" "<<b<<" "<<c<<" "<<d<<" "<<e<<" "<<f<<" "<<g<<" "<<h<<" "<<i<<" "<<j<<" "<<endl;
+cout<<"Digito menor:"<<k8<<endl;
+cout<<"Posicion:"<<k8<<endl;
+getch();}
