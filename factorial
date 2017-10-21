@@ -1,0 +1,40 @@
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+void main () {
+int N,X,n,I,L,P;
+float s,J,k;
+cout<<"Ingrese un numero par para N:";
+cin>>N;
+cout<<"Ingrese un numero entero para X:";
+cin>>X;
+k=0;
+I=2;
+N=N+2;
+s=(3.1416)/5;
+n=2;
+while (I!=N){
+L=1;
+P=2;
+while (P<n){
+L=P*L;
+P=P+1;
+}
+if (k=(n/2)%2)
+{
+J=(pow(X,n)*(-1))/L;
+}
+else {
+J=pow(X,n)/L;
+}
+s=s+J;
+n=n+2;
+I=I+2;
+}
+cout<<"El resultado de la suma es:"<<s<<endl;
+getch();
+}
