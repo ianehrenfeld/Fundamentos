@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main();
+{
+int h1,h2,h,m1,m2,m,s1,s2,s,x,y,z;
+cout<<"Ingrese el primer horario:";
+cin>>h1>>",">>m1>>",">>s1;
+cout<<"Ingrese el segundo horario:";
+cin>>h2>>",">>m2>>",">>s2;
+x=(h1*3600)+(m1*60)+s1;
+y=(h2*3600)+(m2*60)+s2;
+if (x<y) {
+   z=y-x; }
+   else {
+          if (x>y) {
+          z=x-y; }
+                    else {
+                    z=0; }
+                         }
+h=z/3600;
+m=(z/60)-(h*60);
+s=z-(h*3600)-(m*60);
+cout<<"Tiempo transcurido:"<<endl;
+cout<<h<<","<<m<<","<<s<<","<<endl;
+getch();
+}
