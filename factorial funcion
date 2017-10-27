@@ -1,0 +1,42 @@
+
+
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+float fac_serie (float a, int n, int x);
+void main () 
+
+{
+	int n,x,factorial;
+	float a=(3.14)/5, i,p,l;
+	a=(3.14/5);
+	cout << " ingrese el valor de n " << endl;
+	cin >> n;
+	cout << " ingrese el valor de x " << endl;
+	cin >> x;
+	a=fac_serie (a,n,x);
+	cout << "el valor es " << a << endl;
+	getch();
+
+	
+}
+float fac_serie (float a, int n, int x)
+{float i,p,l;
+a=(3.14/5);
+int factorial = 1;
+int c =2;
+for (l=2;l<=n;l=l+2){
+	for (i=1;i<=n;i++){
+		factorial=factorial*1;
+	}
+		c=c+2;
+p=pow(x,i)/2;
+p=p*(-1);
+a=a+p;
+
+}
+cout <<a <<endl;
+return a;
+}
