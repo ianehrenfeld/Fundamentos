@@ -1,0 +1,57 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void hola (); 
+void menor (int a, int b, int c);
+void absoluto (int x);
+int main ()
+{
+	int n,x;
+		int a,b,c;
+		do {
+			cout << " menu " << endl;
+			cout << "1. imprimir hola " << endl;
+			cout << "2.obtener el menor digito de tres valores a,b,y c" << endl;
+			cout << "3.valor absoluto" << endl;
+			cin >>n;
+			switch (n){
+			case 1: hola (); break;
+			case 2: cout << " ingrese los valores a,b,c" << endl;
+				cin >> a >>b>>c;
+				menor (a,b,c);
+				break;
+
+			case 3: cout << "ingrese numero real " << endl;
+				cin >> x;
+				absoluto (x);
+				break;
+			case 4: cout << " salir " << endl;
+				break;
+			default : cout<< "opcion invalida " <<endl;
+			}
+		}
+		while (n!=4);
+		return 0;
+}
+
+void hola () {
+	cout << "hola ";
+}
+void menor (int a, int b, int c ) {
+	bool o=true;
+	cout <<"el menor numero es " ;
+	if (a<b){
+		if (a<c){
+			cout << a << endl;
+			o=false;
+		}
+	}
+	if (o) cout << c << endl;
+}
+void absoluto (int x){
+	if (x<0)
+		x=x*-1;
+	cout<< " el valor es "<< x << endl;
+}
+
