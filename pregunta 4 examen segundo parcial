@@ -1,0 +1,30 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+int pares (int n);
+void main (){
+	int n,s;
+	cout << "ingrese digito " << endl;
+	cin >> n;
+	s= pares (n);
+	cout << "la suma de los numeros pares es "<< endl;
+	cout << s << endl;
+	getch();
+
+
+
+}
+int pares (int n){
+int s=0,i=0,x;
+for (i;i<=n;i=i+0){
+	if (n%2==0){
+	x=n%10;
+	n=n/10;
+	s=s+x;}
+}
+return s;
+
+	
+
+}
