@@ -1,0 +1,19 @@
+#include "stdafx.h"
+#include <iostream >
+#include "conio.h"
+using namespace std;
+void main () {
+int s;
+char letra;
+    s=0;
+do{ 
+    cout << "el programa acabara al ingresar 1" << endl;
+    cout << "ingrese letra"<<endl;
+    cin >> letra;
+    if (letra=='A'||letra=='B'||letra=='C'||letra=='D'||letra=='E'||letra=='F'||letra=='G'||letra=='H'||letra=='I'||letra=='J'||letra=='K'||letra=='L'||letra=='M'||letra=='N'||letra=='O'||letra=='P'||letra=='Q'||letra=='R'||letra=='S'||letra=='T'||letra=='U'||letra=='V'||letra=='W'||letra=='X'||letra=='Y'||letra=='Z')
+        s=s+1;
+}
+while (letra !='1');
+cout << "el numero de letras mayusculas es :" << s<< endl;
+getch();
+}
