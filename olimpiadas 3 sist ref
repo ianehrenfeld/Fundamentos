@@ -1,0 +1,32 @@
+#include "stdafx.h"
+ #include <iostream>
+ #include "conio.h"
+ 
+ using namespace std;
+ 
+ int mayusculas(int num);
+ 
+ void main ()
+ 
+ {
+ 	int num,nummay;
+ 	cout<<"Ingrese el numero de letras"<<endl;
+ 	cin>>num;
+ 	nummay=mayusculas(num);
+ 	cout<<"El numero de letras mayusculas es "<<nummay;
+ 	getch();
+ }
+ int mayusculas(int num)
+ {
+ 	char letra;
+ 	int contador=0;
+ 	for (int i=0;i<num;i++)
+ 	{
+ 		cout<<"Ingrese una letra"<<endl;
+		cin>>letra;
+		if ((letra>='A')&&(letra<='Z'))
+ 			contador++;
+ 	}
+ 	return contador;
+ 
+ }
