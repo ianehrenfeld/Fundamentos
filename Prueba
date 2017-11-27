@@ -35,4 +35,4 @@ void main (){
  		cout<<"Valor ["<<i<<"] = "<<vec[i]<<endl;
 		}
 	getch ();
-}
+} 
