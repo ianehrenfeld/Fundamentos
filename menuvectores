@@ -1,0 +1,96 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+#define  MAX 100
+using namespace std;
+void cargar (int vec[],int n);
+void mostrar (int vec[],int n);
+void ordenar (int vec[],int n);
+int buscar (int vec[],int n, int &k);
+
+void main()
+{
+    int vector [MAX],n,opcion,elemento,k;
+
+    // solicitar numero de elementos
+    do {
+    cout << " ingrese el numero de elementos " << endl;
+    cin >> n;
+    }
+    while ((n<0) || (n>MAX));
+    // mostrar el menu
+    do {
+    cout << "1. cargar vector "<< endl;
+    cout << "2. mostrar vector "<< endl;
+    cout << "3. ordenar vector "<< endl;
+    cout << "4. buscar vector "<< endl;
+    cout << "0. salir "<< endl;
+    cout << "elija opcion "<< endl;
+    cin >> opcion;
+    switch (opcion) {
+    case 1: cargar(vector,n);
+        break;
+    case 2:mostrar (vector,n);
+        break;
+    case 3:ordenar (vector,n);
+        break;
+    case 4:k=buscar (vector,n,elemento);
+        if  (k==-9)
+            cout << "el elemento no se encuentra " << endl;
+        cout << " el elemento se encuentra en la posicion" << k << endl;
+        break;
+    case 0: cout << "salir"<< endl;
+    default: cout << "opcion invaldia " << endl;
+        break;
+    }
+    getch();
+    system("cls");
+    } while (opcion!=0);
+    getch();
+}
+void cargar (int vec[],int n)
+{
+    for (int i=0;i<=n;i++){
+    cout << "ingresar vec ["<< i<< "]= ";
+    cin >> vec [i];
+    }
+}
+void mostrar (int vec[],int n)
+{
+    for (int i=0;i<=n;i++){
+    cout << " vec ["<< i<< "]= ";
+    cout <<vec [i];
+    }
+}
+void ordenar (int vec[],int n)
+{
+    int aux;
+    for (int i=0;i<=n;i++)
+    
+    { for (int j=1;j<n;j++) 
+      { if (vec[j]<vec[i])
+        { aux=vec [i];
+         vec[i]=vec[j];
+            vec[j]=aux;
+    
+        }
+      }
+    }
+}
+int buscar (int vec[],int n, int &k)
+
+{ bool t;
+    cout << " ingrese el elemento " << endl;
+    cin >> k;
+        // suponiendo que esta ordenado
+    if (k<vec[0] || k>vec[n-1])
+        return -9;
+
+    for (int i=0;i<n; i++) {
+        if (vec[i]==k)
+            return i;
+    
+    }
+    return -9;
+}
