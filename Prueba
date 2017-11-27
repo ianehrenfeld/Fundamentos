@@ -1,0 +1,38 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+void main (){
+	int vec[MAX],n,N,aux;
+	cout<<"Ingrese la cantidad de valores del primer arreglo ";
+	cin>>n;
+	cout<<"Ingrese la cantidad de valores del segundo arreglo ";
+	cin>>N;
+	cout<<"Primer Vector"<<endl;
+	for (int i=0;i<n;i++){
+		cout<<"Valor ["<<i<<"] = ";
+		cin>>vec[i];
+	}
+	cout<<"Segundo Vector"<<endl;
+	for (int i=n;i<(n+N);i++){
+		cout<<"Valor ["<<i<<"] = ";
+		cin>>vec[i];
+	}
+	for (int i=0;i<n+N;i++){
+		for (int j=0;j<n+N-1;j++){
+			if(vec[j]>vec[j+1]){
+				aux=vec[j];
+				vec[j]=vec[j+1];
+				vec[j+1]=aux;
+		}
+		}
+	}
+	cout<<"Vector Union"<<endl;
+	for (int i=0;i<n+N;i++){//n=1 y N=2  entonces n+N=3 si i=0 contemos 0=>1 ; 1=>2 ; 2=>3 3=>no cumple || Asi que se queda con 3 valores
+ 		cout<<"Valor ["<<i<<"] = "<<vec[i]<<endl;
+		}
+	getch ();
+}
